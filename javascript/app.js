@@ -19,16 +19,21 @@ function displayMovieImg() {
         url: queryURL,
         method: "GET"
     }).then(function(response) {
-        // Limits results to only 5 backdrop images
+        // Limits results to only 5 backdrop images. does not support custom per page limits, standard list size is 20.
         for (var i=0; i<5; i++) {
             // Variable pulls the 5 backdrop images
             var backdropImage = response.results[i].backdrop_path;
             carouselSlide = $(".carousel-image-" + (i+1) );
             carouselSlide.attr('src', imageBaseURL + backdropImage);
+            // GIves value of riginal_title the images in the slider
             carouselSlide.attr('data-name', response.results[i].original_title);
-
+            
+            // var movieID = response.results[i].id;
+            // var movieYouTubeID = "https://api.themoviedb.org/3/movie/" + movieID + "/videos?api_key=0ff882446ecc7061a134cf692047205b&language=en-US";
+            
+            
             carouselSlide.on('click', function() {
-                window.location.href = 'newindex.html?name=' + $(this).attr('data-name');
+                window.location.href = 'movie-details.html?name=' + $(this).attr('data-name');
             })
         }
         // News article API and AJAX Call
