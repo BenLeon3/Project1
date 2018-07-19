@@ -1,11 +1,44 @@
 body {
-    background-color: grey;
-    
+    background-color: #262626d1;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    width: 100%;
+}
+.page-footer{
+    background-color: black !important;
+    opacity: 0.5;
+}
+main {
+    flex: 1 0 auto;
+}
+.infos{
+     color: white;
+}
+.news{
+    height: 400px;
+}
+.wrapper {
+    width : 100%;
+    margin : 30px;
+}
+h5{
+    color: white;
+    float: left !important;
+}
+h3{
+    color : brown;
+}
+h7{
+    color: brown;
 }
 
-#wrapper {
-    width: 1170px;
-    margin: 0 auto;
+.details{
+    margin-top: 10%;
+}
+.movie_details .container {
+    width: 100%;
+    background-color: #d7d7d7;
 }
 
 #movie-wrapper{
@@ -24,14 +57,27 @@ img{
     height: 160px;
     overflow: hidden;
 }
-
+#user {
+    width: 100px;
+    height: 120px;
+    margin-left: 20%;
+    margin-top: 50%;
+}
+#add {
+    float: right;
+}
+.menu-item ul{
+    float: right;
+    list-style: none;
+}
 .card-image {
     height: 180px;
 }
 
 .slick-next:before, .slick-prev:before  {
-    color: white;
-    font-size: 40px;
+    color: brown;
+    font-size: 20px;
+    opacity: 0.7;
 }
 
 #movie-wrapper .slick-next {
@@ -45,11 +91,39 @@ img{
 }
 
 .slick-dots {
-    bottom: 45px;
+  margin-top: 30px;
+  /* bottom: 45px; */
 }
 
-.slick-dots li button::before { 
-   font-size: 12pt;
-   color: white;
-   bottom: 45px;
+.slick-dots li button::before {
+    font-size: 12pt;
+    color: brown;
+}
+.slick-dots li.slick-active button:before{
+    color: white;
+}
+
+.menu-area ul il a{
+    display: inline-block;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:  black;  
+}
+
+#movieInfo{
+    font-size: 22px;
+}
+.card-reveal{
+    color: black !important;
+}
+
+#poster{
+    margin-top: 10%;
+    width: 100%;
+    height: 80%;
+}
+
+.genre-div{
+    margin-left: 3% !important;
 }
